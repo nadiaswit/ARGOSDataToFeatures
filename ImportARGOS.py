@@ -9,3 +9,7 @@
 ## Created: Fall 2021
 ## Author: Nadia Swit nadia.swit@duke.edu (for ENV859)
 ##---------------------------------------------------------------------
+
+# Import modules
+import sys, os, arcpy
+
