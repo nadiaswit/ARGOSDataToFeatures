@@ -40,6 +40,9 @@ while lineString:
         
         #extract attributes from the datum header line
         tagID = lineData [0]
+        obsDate = lineData[3]
+        obsTime = lineData[4]
+        obsLocation = lineData[7]
         
         #extract location info from the next line
         #need to do this because lat/long info in next line (not first line that we already split)
@@ -53,7 +56,7 @@ while lineString:
         obsLon = line2Data[5]
         
         #print results to see how we're doing
-        print (tagID, "Lat:"+obsLat,"Long:"+obsLon)
+        print (tagID, obsDate, obsTime, obsLocation, "Lat:"+obsLat,"Long:"+obsLon)
         
     #move to the next line so the while loop progresses
     #moves to this section to execute code if the line doesn't have "Date :"; will skip all the above ^ (no else if statement)
